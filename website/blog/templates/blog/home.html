@@ -2,11 +2,15 @@
 {% block title %}Welcome to My Blog{% endblock title %}
 {% block content %}
 <h1>All Posts</h1>
-{% for post in posts %}
-{{ post.title}}
-{{ post.content }}
-{{ post.created_at}}
-<hr>
+<div class="posts">
+    {% for post in posts %}
+    <article>
+        {{ post.title}}
+        {{ post.content }}
+        {{ post.created_at}}
+    </article>
+    <hr>
+</div>
 {% endfor %}
 
 {% endblock content %}
