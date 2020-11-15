@@ -3,14 +3,16 @@
 {% block content %}
 <h1>All Posts</h1>
 <div class="posts">
+    <br>
     {% for post in posts %}
     <article>
-        {{ post.title}}
-        {{ post.content }}
-        {{ post.created_at}}
+        <small>{{ post.created_at}}</small>
+        <h2>{{ post.title}}</h2>
+        <p>{{ post.content }}</p>
     </article>
     <hr>
+    {% endfor %}
 </div>
-{% endfor %}
+
 
 {% endblock content %}
