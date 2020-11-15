@@ -1,3 +1,11 @@
-<nav>
-    <a href="{% url 'blog:home' %}">John Doe</a>
+<!-- As a link -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'blog:home' %}">Home</a>
+    {% if user.is_authenticated %}
+    <a class="navbar-brand" href="{% url 'users:profile' %}">{{ user.username }}</a>
+    <a class="navbar-brand" href="{% url 'users:logout' %}">Logout</a>
+    {% else %}
+    <a class="navbar-brand" href="{% url 'users:login' %}">Login</a>
+    {% endif %}
+
 </nav>
