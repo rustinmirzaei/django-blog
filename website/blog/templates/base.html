@@ -14,12 +14,21 @@
     <header>
         {% include "navbar.html" %}
     </header>
+    <div>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
     <div class="container">
         {% block content %}
         {% endblock content %}
     </div>
-    <footer>
-        <p>copyright - Rustin Mirzaei - 2020</p>
+    <footer class="footer text-center py-3">
+        <p class="text-muted">&copy; 2020 Rustin Mirzaei</p>
     </footer>
     <!-- jQuery and JS bundle w/ Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

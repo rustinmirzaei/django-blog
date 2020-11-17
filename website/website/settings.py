@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Built-in Apps
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -40,6 +41,8 @@ INSTALLED_APPS = [
     # Project Apps
     "blog.apps.BlogConfig",
     "users.apps.UsersConfig",
+    # Third Partty Apps
+    "crispy_forms",
 ]
 
 MIDDLEWARE = [
@@ -125,3 +128,6 @@ STATIC_URL = "/static/"
 
 LOGIN_REDIRECT_URL = "blog:home"
 LOGIN_URL = "users:login"
+
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

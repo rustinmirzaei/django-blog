@@ -5,7 +5,8 @@
     <a class="nav-item ml-auto mr-sm-3" href="{% url 'users:profile' %}">{{ user.username }}</a>
     <a class="nav-item" href="{% url 'users:logout' %}">Logout</a>
     {% else %}
-    <a class="nav-item ml-auto" href="{% url 'users:login' %}">Login</a>
+    <a class="nav-item ml-auto mr-sm-3" href="{% url 'users:register' %}">Register</a>
+    <a class="nav-item" href="{% url 'users:login' %}">Login</a>
     {% endif %}
 
 </nav>
