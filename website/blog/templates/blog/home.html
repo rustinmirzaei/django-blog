@@ -6,8 +6,8 @@
     <br>
     {% for post in posts %}
     <article>
-        <h1>{{ post.title}}</h1>
-        <small>{{ post.created_at}}</small>
+        <h1 class="text-capitalize">{{ post.title}}</h1>
+        <small>{{ post.created_at }}</small>
     </article>
     <hr>
     {% endfor %}
