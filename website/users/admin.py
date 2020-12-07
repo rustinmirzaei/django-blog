@@ -1,4 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
-print("fuck you")
+from .models import Profile
+
+
+admin.site.register(Profile)
